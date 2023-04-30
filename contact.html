@@ -16,13 +16,43 @@
 
     </head>
     <body>
-        <form class="contactForm" action="#" method="post">
+
+        <div class="topnav">
+            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="/contact.html" target="_blank"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+            <a href="/sitemap.html"target="_blank" ><i class="fa fa-fw fa-user"></i>Site Map</a>
+        </div>
+        <style>
+            /* Light mode styles */
+            body {
+                background-color: #f5f5f5;
+                color: #333;
+            }
+            
+            /* Dark mode styles */
+            body.dark {
+                background-color: #333;
+                color: #f5f5f5;
+            }
+        </style>
+        <script>
+            function toggleDarkMode() {
+                document.body.classList.toggle("dark"); // Toggle the "dark" class on the body element
+            }
+        </script>
+        <div>
+            <h1><button onclick="toggleDarkMode()">Toggle dark mode</button></h1>
+            
+        </div>
+        
+        <form class="contactForm" name ='contactForm' action="#" method="post" onsubmit="validateForm()">
             <p class="cform">Hello! If you would like to book a trip to any 
                 South East Asia country, do submit your name,phone number,country you want to visit 
                 and we will reach back as soon as possible with important information about VISA and 
                 trusted travel agencies! Thank you!
             </p>
             <label for="fname">First name:</label><br>
+            <p id="error"></p>
             <input type="text" id="fname" name="fname"><br>
             <label for="lname">Last name:</label><br>
             <input type="text" id="lname" name="lname"><br>
@@ -34,6 +64,32 @@
             <i class="fa fa-paper-plane" aria-hidden="true"></i> Submit
             </button>
         </form>
+        <script>
+            function validateForm(){
+                // let error = document.getElementById('error');
+                let fname = document.forms['contactForm']['fname'].value;
+                if (fname ==''){
+                    alert('First Name must be filled out');
+                    // error.innerHTML ='First Name must be filled out';
+                    
+                }
+                let lname = document.forms['contactForm']['lname'].value;
+                if (lname ==''){
+                    alert('Last Name must be filled out');
+                    // error.innerHTML ='First Name must be filled out';
+                    
+                }
+                let number = document.forms['contactForm']['number'].value;
+                phoneno = /^\d{10}$/;
+                if (number.match(phoneno) ){
+                    alert('Phone number must have 10 digits');
+                    // error.innerHTML ='First Name must be filled out';
+                    
+                }
+            }
+        </script>
+
+
 
         <form class="feedbackForm" action="#" method="post">
             <p class="fform">Hello! If you would like to give us a feedback or would like to

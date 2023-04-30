@@ -17,6 +17,11 @@
         </style>
     </head>
     <body>
+        <div class="topnav">
+            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="/contact.html" target="_blank"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+            <a href="/sitemap.html"target="_blank" ><i class="fa fa-fw fa-user"></i>Site Map</a>
+        </div>
         <h1>
             As a Singaporean myself, I love all different kinds of food.
             Being a multi racial and multi cultural society, there are so much 
@@ -66,7 +71,7 @@
                 </td>
                 <td>Ranges between SGD$4 and SGD$7</td>
                 <td>
-                    <img src="/Images/328-Katong-Laksa.webp" alt="Image of Katong Laksa">
+                    <img src="/Images/328-Katong-Laksa.webp" alt="Image of Katong Laksa" onmouseover="enlargeImage(this)" onmouseout="shrinkImage(this)">
                 </td>
                 </tr>
                 <tr>
@@ -98,7 +103,7 @@
                     Ranges between SGD$3 and SGD$6
                 </td>
                 <td>
-                    <img src="/Images/best-hainanese-chicken-rice-singapore3.jpg.webp" alt="Image of Chicken Rice" height="400" width="610">
+                    <img src="/Images/best-hainanese-chicken-rice-singapore3.jpg.webp" alt="Image of Chicken Rice" height="400" width="610" onmouseover="enlargeImage(this)" onmouseout="shrinkImage(this)">
                 </td>
                 </tr>
          
@@ -130,7 +135,7 @@
                         Ranges between SGD$1 and SGD$4
                     </td>
                     <td>
-                        <img src="/Images/rotiPrata.webp" height="400" width="610" alt="Image of Roti Prata">
+                        <img src="/Images/rotiPrata.webp" height="400" width="610" alt="Image of Roti Prata" onmouseover="enlargeImage(this)" onmouseout="shrinkImage(this)">
                     </td>
                     </tr>
 
@@ -163,7 +168,7 @@
                             Ranges between SGD$1 and SGD$2.50
                         </td>
                         <td>
-                            <img src="/Images/cendol.jpg" height="400" width="610" alt="Image of Chendol">
+                            <img src="/Images/cendol.jpg" height="400" width="610" alt="Image of Chendol" onmouseover="enlargeImage(this)" onmouseout="shrinkImage(this)">
                         </td>
                         </tr>
 
@@ -195,11 +200,23 @@
                                 Ranges between SGD$2 and SGD$4
                             </td>
                             <td>
-                                <img src="/Images/milodino.jpeg" height="400" width="610" alt="Image of Milo Dinosaur">
+                                <img src="/Images/milodino.jpeg" height="400" width="610" alt="Image of Milo Dinosaur" onmouseover="enlargeImage(this)" onmouseout="shrinkImage(this)">
                             </td>
                             </tr>
             
             </table>
+        </div>
+        <div>
+            <script>
+                function enlargeImage(img) {
+			        img.style.width = "150%"; 
+			        img.style.height = "150%"; 
+		}
+		        function shrinkImage(img) {
+			        img.style.width = "100%"; 
+			        img.style.height = "100%";
+		}
+            </script>
         </div>
     </body>
 </html>
